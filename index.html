@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Handyman Cape Town | Professional Home Renovations & Maintenance</title>
-    <meta name="description" content="Cape Town's premier renovation team. Specialized in high-end bathroom & kitchen transformations, certified electrical systems, plumbing, and precision masonry.">
+    <title>Your Handyman Cape Town | Professional Home Renovations</title>
+    <meta name="description" content="Cape Town's premier renovation team. We specialize in luxury bathroom & kitchen transformations, certified electrical systems, plumbing, and precision masonry.">
     <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/facc15/p.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,10 +17,14 @@
         .logo-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
         .hero-mesh { background-image: radial-gradient(at 0% 0%, rgba(250, 204, 21, 0.15) 0px, transparent 50%); }
         
-        /* Premium Card Styles */
+        /* Business Card Styles */
         .vcard-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); border: 1px solid rgba(250, 204, 21, 0.3); }
         .vcard-chip { background: linear-gradient(90deg, #facc15, #eab308); height: 35px; width: 45px; border-radius: 4px; }
         
+        /* Black Piping Detail */
+        .piping-v { width: 2px; background: #000; height: 100%; position: absolute; top: 0; opacity: 0.2; }
+        .piping-h { height: 2px; background: #000; width: 100%; position: absolute; left: 0; opacity: 0.2; }
+
         .wa-pulse { animation: pulse-green 2s infinite; }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
     </style>
@@ -31,13 +35,13 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="logo-font">
                 <span class="text-xl leading-none block">Your Handyman</span>
-                <span class="text-[8px] tracking-[0.4em] text-yellow-400 block uppercase">Cape Town</span>
+                <span class="text-[8px] tracking-[0.4em] text-yellow-400 block uppercase font-bold">Cape Town</span>
             </div>
             <div class="hidden md:flex gap-8 text-[10px] tracking-widest uppercase font-extrabold text-slate-400">
                 <a href="#services" class="hover:text-yellow-400 transition">Expertise</a>
                 <a href="#gallery" class="hover:text-yellow-400 transition">Projects</a>
             </div>
-            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-6 py-2 rounded-sm font-black text-[10px] tracking-widest uppercase hover:invert transition">WhatsApp Quote</a>
+            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-6 py-2 rounded-sm font-black text-[10px] tracking-widest uppercase hover:bg-white transition duration-300">WhatsApp Quote</a>
         </div>
     </nav>
 
@@ -52,7 +56,7 @@
             <div class="rounded-2xl overflow-hidden border-2 border-yellow-400/30 shadow-2xl">
                 <img src="images/meet prince.jpeg" alt="Your Handyman Cape Town Team" class="h-[500px] w-full object-cover">
                 <div class="absolute bottom-0 w-full p-6 bg-gradient-to-t from-black to-transparent">
-                    <p class="text-xs tracking-widest uppercase font-bold">Prince | Managing Director</p>
+                    <p class="text-xs tracking-widest uppercase font-bold">Prince | Lead Contractor</p>
                 </div>
             </div>
         </div>
@@ -60,11 +64,11 @@
 
     <section class="py-12 px-6">
         <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <p class="text-[10px] tracking-[0.4em] uppercase text-slate-500 mb-6 font-bold">Tap to save business details</p>
+            <p class="text-[10px] tracking-[0.4em] uppercase text-slate-500 mb-6 font-bold">Tap to save our contact info</p>
             
             <div onclick="downloadVCard()" class="vcard-gradient w-full max-w-md p-8 rounded-2xl shadow-2xl cursor-pointer hover:border-yellow-400 transition-all duration-300 active:scale-95 relative group">
                 <div class="flex justify-between items-start mb-10">
-                    <div class="vcard-chip"></div>
+                    <div class="vcard-chip shadow-lg"></div>
                     <div class="text-right">
                         <h2 class="logo-font text-sm leading-tight text-white">Your Handyman</h2>
                         <p class="text-yellow-400 text-[8px] tracking-[0.3em]">CAPE TOWN</p>
@@ -72,17 +76,39 @@
                 </div>
 
                 <div class="space-y-1">
-                    <h3 class="text-3xl font-black uppercase tracking-tighter tracking-widest">PRINCE</h3>
-                    <p class="text-slate-400 text-[10px] uppercase tracking-[0.3em] mb-4">Founder & Lead Contractor</p>
+                    <h3 class="text-3xl font-black uppercase tracking-widest">PRINCE</h3>
+                    <p class="text-slate-400 text-[10px] uppercase tracking-[0.3em] mb-4">Founder & Master Contractor</p>
                 </div>
 
                 <div class="mt-10 pt-6 border-t border-white/10 flex justify-between items-center">
-                    <div class="text-[11px] space-y-1 font-bold text-slate-300">
+                    <div class="text-[11px] space-y-1 font-bold text-slate-300 uppercase tracking-tighter">
                         <p class="flex items-center gap-2"><span>📱</span> +27 68 305 7176</p>
                         <p class="flex items-center gap-2"><span>🌍</span> yourhandymancapetown.co.za</p>
                     </div>
-                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest shadow-lg">Save Info</div>
+                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest shadow-xl">Save Info</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 px-6 bg-yellow-400 text-black overflow-hidden">
+        <div class="piping-v left-[20%]"></div>
+        <div class="piping-v left-[80%]"></div>
+        <div class="piping-h top-[30%] opacity-10"></div>
+        <div class="piping-h bottom-[30%] opacity-10"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <div data-aos="fade-up">
+                <h4 class="font-black text-4xl uppercase italic">Ultra Clean</h4>
+                <p class="font-bold text-sm mt-2">We respect your space. Our teams operate with a strictly clean workflow, leaving your home spotless every day.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-black text-4xl uppercase italic">Fast Turnaround</h4>
+                <p class="font-bold text-sm mt-2">We understand the value of time in Cape Town. We meet deadlines without ever compromising on quality.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-black text-4xl uppercase italic">Expert Grade</h4>
+                <p class="font-bold text-sm mt-2">We use industrial-standard materials and professional tools to ensure every job is done right the first time.</p>
             </div>
         </div>
     </section>
@@ -91,53 +117,36 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="logo-font text-4xl mb-20 border-b border-white/10 pb-6">CORE <span class="text-yellow-400">EXPERTISE</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all group" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Electrical Systems</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">We provide comprehensive wiring, fault finding, and <strong>DB Board installations</strong> compliant with Cape Town safety standards.</p>
+                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-4 uppercase">Electrical Systems</h3>
+                    <p class="text-slate-400 text-sm">We provide wiring, fault finding, and <strong>DB Board installations</strong> compliant with all safety standards.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all group" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Advanced Plumbing</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Expert geyser maintenance, high-pressure system installation, and luxury kitchen/bathroom plumbing fixtures.</p>
+                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 uppercase">Advanced Plumbing</h3>
+                    <p class="text-slate-400 text-sm">Expert geyser maintenance, high-pressure systems, and luxury kitchen/bathroom fitments.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all group" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Precision Tiling</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Specialized in Marble, Porcelain, and Ceramic laying. We focus on clean lines and level finishes for all flooring and walls.</p>
+                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 uppercase">Precision Tiling</h3>
+                    <p class="text-slate-400 text-sm">Marble, Porcelain, and Ceramic. We focus on clean lines and level finishes for all flooring and walls.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all group" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Masonry & Walling</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">We handle structural brickwork, boundary walling, and decorative stone cladding designed to last.</p>
+                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-4 uppercase">Masonry & Walling</h3>
+                    <p class="text-slate-400 text-sm">We handle structural brickwork, boundary walling, and decorative stone cladding designed to last.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all group" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Roofing Solutions</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Waterproofing and structural roof repairs. We ensure your property is shielded from the Western Cape's winter weather.</p>
+                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 uppercase">Roofing Solutions</h3>
+                    <p class="text-slate-400 text-sm">Waterproofing and structural roof repairs. We protect your property from the harsh Cape winters.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all group" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Full Maintenance</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">From painting to flooring and ceiling repairs. We offer a true top-to-bottom service for premium properties.</p>
+                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 uppercase">Total Maintenance</h3>
+                    <p class="text-slate-400 text-sm">Painting, flooring, and ceiling repairs. We offer a true top-to-bottom service for premium properties.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-yellow-400 text-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div data-aos="fade-up">
-                <h4 class="font-black text-4xl uppercase italic">Ultra Clean</h4>
-                <p class="font-bold text-sm mt-2">We respect your space. Our teams operate with a strictly clean workflow, leaving your home spotless.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h4 class="font-black text-4xl uppercase italic">Fast Turnaround</h4>
-                <p class="font-bold text-sm mt-2">We understand the value of time. We meet deadlines without ever compromising on quality.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <h4 class="font-black text-4xl uppercase italic">Expert Grade</h4>
-                <p class="font-bold text-sm mt-2">We use industrial-standard materials and tools to ensure every job is done right the first time.</p>
             </div>
         </div>
     </section>
 
     <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
-        <h2 class="logo-font text-2xl mb-12 tracking-widest text-white/50 uppercase">Recent Works</h2>
+        <h2 class="logo-font text-2xl mb-12 tracking-widest text-white/50 uppercase italic">Recent Works</h2>
         <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             <img src="images/stunning shower fitted.jpg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
             <img src="images/kitchen counter.jpeg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
@@ -148,13 +157,13 @@
         </div>
     </section>
 
-    <footer class="pt-32 pb-10 border-t border-white/5 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-        <div class="text-center md:text-left">
+    <footer class="pt-32 pb-10 border-t border-white/5 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+        <div>
             <p class="logo-font text-lg mb-2 text-yellow-400">Your Handyman Cape Town</p>
             <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">© 2026 | www.yourhandymancapetown.co.za</p>
         </div>
         <div class="flex flex-col md:items-end">
-            <span class="text-[9px] text-slate-600 uppercase font-black mb-1">Built By</span>
+            <span class="text-[9px] text-slate-600 uppercase font-black mb-1 tracking-tighter">Strategically Built By</span>
             <a href="https://forgevertical.com" class="text-xs font-black tracking-widest hover:text-yellow-400 transition">FORGEVERTICAL.COM</a>
         </div>
     </footer>
