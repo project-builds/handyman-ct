@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | Your Handyman Cape Town</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .logo-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <nav class="p-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="logo-font text-lg leading-none">Your Handyman <span class="text-yellow-400 block text-[8px] tracking-[0.3em]">Back Home</span></a>
+            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-4 py-2 rounded-sm font-black text-[9px] uppercase">WhatsApp Quote</a>
+        </div>
+    </nav>
+
+    <header class="py-20 px-6 text-center">
+        <h1 class="logo-font text-4xl md:text-6xl mb-4">EXTENDED <span class="text-yellow-400">GALLERY</span></h1>
+        <p class="text-slate-500 uppercase tracking-widest text-xs">A deep dive into our craft and precision</p>
+    </header>
+
+    <section class="px-6 pb-32 max-w-7xl mx-auto">
+        <div class="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4">
+            <img src="images/bathroom renovation.jpg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/bathroom revamp.jpg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/beautiful tiling.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/flooring.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/kitchen counter.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/kitchen fixtures.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/outside maintainance.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/painting fittings and more.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/roofing.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/showers fitted at best brice.jpg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/stunning shower fitted.jpg" class="w-full rounded-lg" data-aos="zoom-in">
+            <img src="images/tiling.jpeg" class="w-full rounded-lg" data-aos="zoom-in">
+        </div>
+    </section>
+
+    <footer class="p-10 text-center border-t border-white/5">
+        <p class="logo-font text-[10px] text-slate-600">Your Handyman Cape Town &copy; 2026</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 600, once: true });</script>
+</body>
+</html>
