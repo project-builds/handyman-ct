@@ -17,7 +17,6 @@
         .logo-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
         .hero-mesh { background-image: radial-gradient(at 0% 0%, rgba(250, 204, 21, 0.15) 0px, transparent 50%); }
         
-        /* Business Card Styles */
         .vcard-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); border: 1px solid rgba(250, 204, 21, 0.3); }
         .vcard-chip { background: linear-gradient(90deg, #facc15, #eab308); height: 35px; width: 45px; border-radius: 4px; }
         
@@ -27,19 +26,19 @@
 
         .wa-pulse { animation: pulse-green 2s infinite; }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        /* Modal Transitions */
+        #galleryModal { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; }
+        .modal-open { overflow: hidden; }
     </style>
 </head>
 <body class="hero-mesh">
 
-    <nav class="fixed top-0 w-full z-[100] bg-black/90 backdrop-blur-xl border-b border-white/5 px-6 py-4">
+    <nav class="fixed top-0 w-full z-[80] bg-black/90 backdrop-blur-xl border-b border-white/5 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="logo-font">
                 <span class="text-xl leading-none block">Your Handyman</span>
                 <span class="text-[8px] tracking-[0.4em] text-yellow-400 block uppercase font-bold">Cape Town</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-[10px] tracking-widest uppercase font-extrabold text-slate-400">
-                <a href="#services" class="hover:text-yellow-400 transition">Expertise</a>
-                <a href="gallery.html" class="hover:text-yellow-400 transition underline underline-offset-8 decoration-yellow-400">Extended Gallery</a>
             </div>
             <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-6 py-2 rounded-sm font-black text-[10px] tracking-widest uppercase hover:bg-white transition duration-300">WhatsApp Quote</a>
         </div>
@@ -55,18 +54,14 @@
         <div class="lg:col-span-5 relative" data-aos="zoom-in">
             <div class="rounded-2xl overflow-hidden border-2 border-yellow-400/30 shadow-2xl">
                 <img src="images/meet prince.jpeg" alt="Your Handyman Cape Town Team" class="h-[500px] w-full object-cover">
-                <div class="absolute bottom-0 w-full p-6 bg-gradient-to-t from-black to-transparent">
-                    <p class="text-xs tracking-widest uppercase font-bold">Prince | Lead Contractor</p>
-                </div>
             </div>
         </div>
     </header>
 
     <section class="py-12 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <p class="text-[10px] tracking-[0.4em] uppercase text-slate-500 mb-6 font-bold">Tap to save our contact info</p>
-            
-            <div onclick="downloadVCard()" class="vcard-gradient w-full max-w-md p-8 rounded-2xl shadow-2xl cursor-pointer hover:border-yellow-400 transition-all duration-300 active:scale-95 relative group">
+        <div class="max-w-7xl mx-auto flex flex-col items-center" onclick="downloadVCard()">
+            <p class="text-[10px] tracking-[0.4em] uppercase text-slate-500 mb-6 font-bold uppercase text-center">Tap card to save business details</p>
+            <div class="vcard-gradient w-full max-w-md p-8 rounded-2xl shadow-2xl cursor-pointer hover:border-yellow-400 transition-all active:scale-95 relative group">
                 <div class="flex justify-between items-start mb-10">
                     <div class="vcard-chip shadow-lg"></div>
                     <div class="text-right">
@@ -74,29 +69,22 @@
                         <p class="text-yellow-400 text-[8px] tracking-[0.3em]">CAPE TOWN</p>
                     </div>
                 </div>
-
                 <div class="space-y-1">
                     <h3 class="text-3xl font-black uppercase tracking-widest">PRINCE</h3>
                     <p class="text-slate-400 text-[10px] uppercase tracking-[0.3em] mb-4">Founder & Master Contractor</p>
                 </div>
-
-                <div class="mt-10 pt-6 border-t border-white/10 flex justify-between items-center">
-                    <div class="text-[11px] space-y-1 font-bold text-slate-300 uppercase tracking-tighter">
-                        <p class="flex items-center gap-2"><span>📱</span> +27 68 305 7176</p>
-                        <p class="flex items-center gap-2"><span>🌍</span> yourhandymancapetown.co.za</p>
-                    </div>
-                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest shadow-xl">Save Info</div>
+                <div class="mt-10 pt-6 border-t border-white/10 flex justify-between items-center text-[11px] font-bold text-slate-300">
+                    <p>📱 +27 68 305 7176</p>
+                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest">Save Info</div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="relative py-24 px-6 bg-yellow-400 text-black overflow-hidden">
-        <div class="piping-v left-[20%]"></div>
-        <div class="piping-v left-[80%]"></div>
-        <div class="piping-h top-[30%] opacity-10"></div>
-        <div class="piping-h bottom-[30%] opacity-10"></div>
-
+        <div class="piping-v left-[20%]"></div><div class="piping-v left-[80%]"></div>
+        <div class="piping-h top-[30%] opacity-10"></div><div class="piping-h bottom-[30%] opacity-10"></div>
+        
         <div style="display:none;">
             <label>Bot trap: <input name="prince_bot_trap" /></label>
         </div>
@@ -104,15 +92,15 @@
         <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div data-aos="fade-up">
                 <h4 class="font-black text-4xl uppercase italic leading-none">Ultra Clean</h4>
-                <p class="font-bold text-sm mt-2">We respect your space. Our teams operate with a strictly clean workflow, leaving your home spotless every day.</p>
+                <p class="font-bold text-sm mt-2">Zero-dust workflow. We respect your home.</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
                 <h4 class="font-black text-4xl uppercase italic leading-none">Fast Turn</h4>
-                <p class="font-bold text-sm mt-2">We understand the value of time in Cape Town. We meet deadlines without ever compromising on quality.</p>
+                <p class="font-bold text-sm mt-2">Strict deadlines. Premium efficiency.</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200">
                 <h4 class="font-black text-4xl uppercase italic leading-none">Expert Grade</h4>
-                <p class="font-bold text-sm mt-2">We use industrial-standard materials and professional tools to ensure every job is done right the first time.</p>
+                <p class="font-bold text-sm mt-2">Industrial tools for a master-class finish.</p>
             </div>
         </div>
     </section>
@@ -149,18 +137,43 @@
         </div>
     </section>
 
-    <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-20 text-center">
+    <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto text-center">
         <h2 class="logo-font text-2xl mb-12 tracking-widest text-white/50 uppercase italic text-left">Recent Works</h2>
         <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mb-16">
             <img src="images/stunning shower fitted.jpg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
             <img src="images/kitchen counter.jpeg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
             <img src="images/bathroom renovation.jpg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
-            <img src="images/flooring.jpeg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
-            <img src="images/beautiful tiling.jpeg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
-            <img src="images/roofing.jpeg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
         </div>
-        <a href="gallery.html" class="inline-block border border-yellow-400 text-yellow-400 px-8 py-4 rounded-sm font-black text-xs tracking-[0.3em] uppercase hover:bg-yellow-400 hover:text-black transition duration-500 shadow-[0_0_20px_rgba(250,204,21,0.2)]">Explore Extended Gallery</a>
+        <button onclick="toggleModal()" class="inline-block border border-yellow-400 text-yellow-400 px-8 py-4 rounded-sm font-black text-xs tracking-[0.3em] uppercase hover:bg-yellow-400 hover:text-black transition duration-500 shadow-[0_0_20px_rgba(250,204,21,0.2)]">Explore Extended Gallery</button>
     </section>
+
+    <div id="galleryModal" class="fixed inset-0 z-[200] bg-black translate-y-full opacity-0 pointer-events-none overflow-y-auto">
+        <div class="sticky top-0 z-[210] p-6 flex justify-between items-center bg-black/90 backdrop-blur-md border-b border-white/10">
+            <h2 class="logo-font text-xl text-yellow-400">Extended Gallery</h2>
+            <button onclick="toggleModal()" class="text-white text-4xl font-light hover:text-yellow-400 transition">&times;</button>
+        </div>
+        <div class="p-6 max-w-7xl mx-auto">
+            <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+                <img src="images/bathroom renovation.jpg" class="w-full rounded-lg">
+                <img src="images/bathroom revamp.jpg" class="w-full rounded-lg">
+                <img src="images/beautiful tiling.jpeg" class="w-full rounded-lg">
+                <img src="images/flooring.jpeg" class="w-full rounded-lg">
+                <img src="images/kitchen counter.jpeg" class="w-full rounded-lg">
+                <img src="images/kitchen fixtures.jpeg" class="w-full rounded-lg">
+                <img src="images/outside maintainance.jpeg" class="w-full rounded-lg">
+                <img src="images/painting fittings and more.jpeg" class="w-full rounded-lg">
+                <img src="images/roofing.jpeg" class="w-full rounded-lg">
+                <img src="images/showers fitted at best brice.jpg" class="w-full rounded-lg">
+                <img src="images/stunning shower fitted.jpg" class="w-full rounded-lg">
+                <img src="images/tiling.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.44.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.45 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.47.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.52.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (1).jpeg" class="w-full rounded-lg">
+            </div>
+        </div>
+    </div>
 
     <footer class="pt-32 pb-10 border-t border-white/5 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
         <div>
@@ -168,38 +181,38 @@
             <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">© 2026 | www.yourhandymancapetown.co.za</p>
         </div>
         <div class="flex flex-col md:items-end">
-            <span class="text-[9px] text-slate-600 uppercase font-black mb-1 tracking-tighter">Strategically Built By</span>
+            <span class="text-[9px] text-slate-600 uppercase font-black mb-1">Strategically Built By</span>
             <a href="https://forgevertical.com" class="text-xs font-black tracking-widest hover:text-yellow-400 transition">FORGEVERTICAL.COM</a>
         </div>
     </footer>
 
-    <a href="https://wa.me/27683057176" class="fixed bottom-8 right-8 z-[200] bg-[#25D366] p-5 rounded-full shadow-2xl wa-pulse hover:scale-110 transition duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-        </svg>
+    <a href="https://wa.me/27683057176" class="fixed bottom-8 right-8 z-[150] bg-[#25D366] p-5 rounded-full shadow-2xl wa-pulse hover:scale-110 transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
     </a>
 
     <script>
+        function toggleModal() {
+            const modal = document.getElementById('galleryModal');
+            const isOpen = !modal.classList.contains('translate-y-full');
+            if (isOpen) {
+                modal.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+                document.body.classList.remove('modal-open');
+            } else {
+                modal.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+                document.body.classList.add('modal-open');
+            }
+        }
+
         function downloadVCard() {
-            const vCardData = `BEGIN:VCARD
-VERSION:3.0
-FN:Prince - Your Handyman CT
-ORG:Your Handyman Cape Town
-TEL;TYPE=CELL:+27683057176
-URL:https://www.yourhandymancapetown.co.za
-END:VCARD`;
+            const vCardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Prince - Your Handyman CT\nORG:Your Handyman Cape Town\nTEL;TYPE=CELL:+27683057176\nURL:https://www.yourhandymancapetown.co.za\nEND:VCARD`;
             const blob = new Blob([vCardData], { type: 'text/vcard' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Prince_Handyman_CT.vcf';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
+            a.href = url; a.download = 'Prince_Handyman_CT.vcf';
+            document.body.appendChild(a); a.click();
+            window.URL.revokeObjectURL(url); document.body.removeChild(a);
         }
     </script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 800, once: true });</script>
 </body>
