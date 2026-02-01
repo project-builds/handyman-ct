@@ -10,67 +10,71 @@
     <style>
         body { background-color: #050505; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; }
         .logo-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
-        /* Smooth masonry transition */
-        .gallery-item { break-inside: avoid; margin-bottom: 1rem; transition: transform 0.3s ease; }
-        .gallery-item:hover { transform: scale(1.02); }
+        .gallery-item { break-inside: avoid; margin-bottom: 1.5rem; transition: all 0.5s ease; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; border-radius: 12px; }
+        .gallery-item img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item:hover { border-color: #facc15; box-shadow: 0 0 20px rgba(250, 204, 21, 0.2); }
     </style>
 </head>
 <body>
-    <nav class="p-6 border-b border-white/5 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+    <nav class="p-6 border-b border-white/5 sticky top-0 z-50 bg-black/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="logo-font text-lg leading-none">
-                Your Handyman <span class="text-yellow-400 block text-[8px] tracking-[0.3em]">Return Home</span>
-            </a>
-            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-4 py-2 rounded-sm font-black text-[9px] uppercase">Contact Prince</a>
+            <a href="index.html" class="logo-font text-lg leading-none">Your Handyman <span class="text-yellow-400 block text-[8px] tracking-[0.3em]">Home</span></a>
+            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-4 py-2 rounded-sm font-black text-[9px] uppercase">WhatsApp Quote</a>
         </div>
     </nav>
 
     <header class="py-20 px-6 text-center">
         <h1 class="logo-font text-4xl md:text-6xl mb-4">PROJECT <span class="text-yellow-400">GALLERY</span></h1>
-        <p class="text-slate-500 uppercase tracking-widest text-xs">Excellence in every detail across Cape Town</p>
+        <p class="text-slate-500 uppercase tracking-widest text-xs">Excellence in every project across Cape Town</p>
     </header>
 
     <section class="px-6 pb-32 max-w-7xl mx-auto">
-        <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4">
+        <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6">
             
-            <img src="images/bathroom renovation.jpg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/bathroom revamp.jpg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/beautiful tiling.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/flooring.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/kitchen counter.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/kitchen fixtures.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/outside maintainance.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/painting fittings and more.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/roofing.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/showers fitted at best brice.jpg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/stunning shower fitted.jpg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/tiling.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
+            <div class="gallery-item" data-aos="fade-up"><img src="images/bathroom renovation.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/bathroom revamp.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/beautiful tiling.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/flooring.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/kitchen counter.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/kitchen fixtures.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/outside maintainance.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/painting fittings and more.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/roofing.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/showers fitted at best brice.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/stunning shower fitted.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/tiling.jpeg"></div>
 
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.44.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.45 (1).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.45.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.47.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.49 (1).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.49.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.51 (1).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.35.51.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.02.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.04 (1).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.04.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.05 (1).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.05 (2).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.05.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (1).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (2).jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-            <img src="images/WhatsApp Image 2026-01-29 at 17.36.09.jpeg" class="gallery-item rounded-lg shadow-xl" data-aos="fade-up">
-
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.44.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.45 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.45.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.47.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.49 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.49.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.51 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.51.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.52.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.35.53.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.02.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.03 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.03.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.04 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.04.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.05 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.05 (2).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.05.jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.06 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.07 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (1).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (2).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.09 (2).jpeg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="images/WhatsApp Image 2026-01-29 at 17.36.09.jpeg"></div>
+            
         </div>
     </section>
 
-    <div style="display:none;"><input name="bot_trap_gallery"></div>
-
-    <footer class="py-10 text-center border-t border-white/5">
-        <p class="logo-font text-[10px] text-slate-600">Your Handyman Cape Town &copy; 2026 | Strategically Built by Forge Vertical</p>
+    <footer class="p-10 text-center border-t border-white/5">
+        <p class="logo-font text-[10px] text-slate-600">Your Handyman Cape Town &copy; 2026</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
