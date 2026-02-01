@@ -16,20 +16,16 @@
         body { background-color: #050505; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .logo-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
         .hero-mesh { background-image: radial-gradient(at 0% 0%, rgba(250, 204, 21, 0.15) 0px, transparent 50%); }
-        
         .vcard-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); border: 1px solid rgba(250, 204, 21, 0.3); }
         .vcard-chip { background: linear-gradient(90deg, #facc15, #eab308); height: 35px; width: 45px; border-radius: 4px; }
-        
-        /* Black Piping Detail */
         .piping-v { width: 2px; background: #000; height: 100%; position: absolute; top: 0; opacity: 0.2; }
         .piping-h { height: 2px; background: #000; width: 100%; position: absolute; left: 0; opacity: 0.2; }
-
         .wa-pulse { animation: pulse-green 2s infinite; }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-
-        /* Modal Transitions */
         #galleryModal { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; }
         .modal-open { overflow: hidden; }
+        .icon-box { transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
+        .icon-box:hover { border-color: var(--accent); background: rgba(250, 204, 21, 0.05); }
     </style>
 </head>
 <body class="hero-mesh">
@@ -40,7 +36,7 @@
                 <span class="text-xl leading-none block">Your Handyman</span>
                 <span class="text-[8px] tracking-[0.4em] text-yellow-400 block uppercase font-bold">Cape Town</span>
             </div>
-            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-6 py-2 rounded-sm font-black text-[10px] tracking-widest uppercase hover:bg-white transition duration-300">WhatsApp Quote</a>
+            <a href="https://wa.me/27683057176" class="bg-yellow-400 text-black px-6 py-2 rounded-sm font-black text-[10px] tracking-widest uppercase hover:bg-white transition">WhatsApp Quote</a>
         </div>
     </nav>
 
@@ -60,22 +56,22 @@
 
     <section class="py-12 px-6">
         <div class="max-w-7xl mx-auto flex flex-col items-center" onclick="downloadVCard()">
-            <p class="text-[10px] tracking-[0.4em] uppercase text-slate-500 mb-6 font-bold uppercase text-center">Tap card to save business details</p>
+            <p class="text-[10px] tracking-[0.4em] uppercase text-slate-500 mb-6 font-bold uppercase">Tap card to save business details</p>
             <div class="vcard-gradient w-full max-w-md p-8 rounded-2xl shadow-2xl cursor-pointer hover:border-yellow-400 transition-all active:scale-95 relative group">
                 <div class="flex justify-between items-start mb-10">
                     <div class="vcard-chip shadow-lg"></div>
-                    <div class="text-right">
-                        <h2 class="logo-font text-sm leading-tight text-white">Your Handyman</h2>
+                    <div class="text-right text-white">
+                        <h2 class="logo-font text-sm leading-tight">Your Handyman</h2>
                         <p class="text-yellow-400 text-[8px] tracking-[0.3em]">CAPE TOWN</p>
                     </div>
                 </div>
                 <div class="space-y-1">
                     <h3 class="text-3xl font-black uppercase tracking-widest">PRINCE</h3>
-                    <p class="text-slate-400 text-[10px] uppercase tracking-[0.3em] mb-4">Founder & Master Contractor</p>
+                    <p class="text-slate-400 text-[10px] uppercase tracking-[0.3em] mb-4">Founder & Lead Contractor</p>
                 </div>
                 <div class="mt-10 pt-6 border-t border-white/10 flex justify-between items-center text-[11px] font-bold text-slate-300">
                     <p>📱 +27 68 305 7176</p>
-                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest">Save Info</div>
+                    <div class="bg-yellow-400 text-black px-4 py-2 rounded-sm text-[10px] font-black uppercase">Save Info</div>
                 </div>
             </div>
         </div>
@@ -84,11 +80,7 @@
     <section class="relative py-24 px-6 bg-yellow-400 text-black overflow-hidden">
         <div class="piping-v left-[20%]"></div><div class="piping-v left-[80%]"></div>
         <div class="piping-h top-[30%] opacity-10"></div><div class="piping-h bottom-[30%] opacity-10"></div>
-        
-        <div style="display:none;">
-            <label>Bot trap: <input name="prince_bot_trap" /></label>
-        </div>
-
+        <div style="display:none;"><input name="prince_bot_trap" /></div>
         <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             <div data-aos="fade-up">
                 <h4 class="font-black text-4xl uppercase italic leading-none">Ultra Clean</h4>
@@ -109,47 +101,63 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="logo-font text-4xl mb-20 border-b border-white/10 pb-6">CORE <span class="text-yellow-400">EXPERTISE</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up">
+                
+                <div class="icon-box p-8 group" data-aos="fade-up">
+                    <svg class="w-10 h-10 text-yellow-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     <h3 class="text-xl font-bold mb-4 uppercase">Electrical Systems</h3>
-                    <p class="text-slate-400 text-sm">We provide wiring, fault finding, and <strong>DB Board installations</strong> compliant with all safety standards.</p>
+                    <p class="text-slate-400 text-sm">Certified wiring and <strong>DB Board installations</strong> compliant with safety standards.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="icon-box p-8 group" data-aos="fade-up" data-aos-delay="100">
+                    <svg class="w-10 h-10 text-yellow-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.283a2 2 0 01-1.186.128l-2.431-.486a2 2 0 00-1.074.057l-1.135.454a2 2 0 01-1.267.034l-2.177-.725"/></svg>
                     <h3 class="text-xl font-bold mb-4 uppercase">Advanced Plumbing</h3>
-                    <p class="text-slate-400 text-sm">Expert geyser maintenance, high-pressure systems, and luxury kitchen/bathroom fitments.</p>
+                    <p class="text-slate-400 text-sm">Expert geyser maintenance, high-pressure systems, and luxury fitments.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="icon-box p-8 group" data-aos="fade-up" data-aos-delay="200">
+                    <svg class="w-10 h-10 text-yellow-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
                     <h3 class="text-xl font-bold mb-4 uppercase">Precision Tiling</h3>
-                    <p class="text-slate-400 text-sm">Marble, Porcelain, and Ceramic. We focus on clean lines and level finishes for all flooring and walls.</p>
+                    <p class="text-slate-400 text-sm">Marble, Porcelain, and Ceramic. Level finishes for premium flooring and walls.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up">
+
+                <div class="icon-box p-8 group" data-aos="fade-up">
+                    <svg class="w-10 h-10 text-yellow-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                     <h3 class="text-xl font-bold mb-4 uppercase">Masonry & Walling</h3>
-                    <p class="text-slate-400 text-sm">We handle structural brickwork, boundary walling, and decorative stone cladding designed to last.</p>
+                    <p class="text-slate-400 text-sm">Structural brickwork, boundary walling, and decorative stone cladding.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="icon-box p-8 group" data-aos="fade-up" data-aos-delay="100">
+                    <svg class="w-10 h-10 text-yellow-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                     <h3 class="text-xl font-bold mb-4 uppercase">Roofing Solutions</h3>
-                    <p class="text-slate-400 text-sm">Waterproofing and structural roof repairs. We protect your property from the harsh Cape winters.</p>
+                    <p class="text-slate-400 text-sm">Waterproofing and structural roof repairs designed for Cape winters.</p>
                 </div>
-                <div class="p-8 border border-white/10 hover:bg-white/[0.03] transition-all" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="icon-box p-8 group" data-aos="fade-up" data-aos-delay="200">
+                    <svg class="w-10 h-10 text-yellow-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                     <h3 class="text-xl font-bold mb-4 uppercase">Total Maintenance</h3>
-                    <p class="text-slate-400 text-sm">Painting, flooring, and ceiling repairs. We offer a true top-to-bottom service for premium properties.</p>
+                    <p class="text-slate-400 text-sm">Painting, flooring, and ceiling repairs. Top-to-bottom service for premium homes.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <section id="gallery" class="py-24 px-6 max-w-7xl mx-auto text-center">
-        <h2 class="logo-font text-2xl mb-12 tracking-widest text-white/50 uppercase italic text-left">Recent Works</h2>
+        <h2 class="logo-font text-2xl mb-12 tracking-widest text-white/50 uppercase italic text-left">Recent Portfolio</h2>
         <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mb-16">
-            <img src="images/stunning shower fitted.jpg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
-            <img src="images/kitchen counter.jpeg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
-            <img src="images/bathroom renovation.jpg" class="w-full rounded-xl shadow-2xl" data-aos="fade-up">
+            <img src="images/stunning shower fitted.jpg" class="w-full rounded-xl shadow-2xl hover:scale-[1.02] transition" data-aos="fade-up">
+            <img src="images/kitchen counter.jpeg" class="w-full rounded-xl shadow-2xl hover:scale-[1.02] transition" data-aos="fade-up">
+            <img src="images/bathroom renovation.jpg" class="w-full rounded-xl shadow-2xl hover:scale-[1.02] transition" data-aos="fade-up">
+            <img src="images/flooring.jpeg" class="w-full rounded-xl shadow-2xl hover:scale-[1.02] transition" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/beautiful tiling.jpeg" class="w-full rounded-xl shadow-2xl hover:scale-[1.02] transition" data-aos="fade-up" data-aos-delay="100">
+            <img src="images/roofing.jpeg" class="w-full rounded-xl shadow-2xl hover:scale-[1.02] transition" data-aos="fade-up" data-aos-delay="100">
         </div>
-        <button onclick="toggleModal()" class="inline-block border border-yellow-400 text-yellow-400 px-8 py-4 rounded-sm font-black text-xs tracking-[0.3em] uppercase hover:bg-yellow-400 hover:text-black transition duration-500 shadow-[0_0_20px_rgba(250,204,21,0.2)]">Explore Extended Gallery</button>
+        <button onclick="toggleModal()" class="inline-block border border-yellow-400 text-yellow-400 px-8 py-4 rounded-sm font-black text-xs tracking-[0.3em] uppercase hover:bg-yellow-400 hover:text-black transition">Full Gallery Showcase</button>
     </section>
 
     <div id="galleryModal" class="fixed inset-0 z-[200] bg-black translate-y-full opacity-0 pointer-events-none overflow-y-auto">
-        <div class="sticky top-0 z-[210] p-6 flex justify-between items-center bg-black/90 backdrop-blur-md border-b border-white/10">
-            <h2 class="logo-font text-xl text-yellow-400">Extended Gallery</h2>
+        <div class="sticky top-0 z-[210] p-6 flex justify-between items-center bg-black/95 backdrop-blur-md border-b border-white/10">
+            <h2 class="logo-font text-xl text-yellow-400">Complete Project Log</h2>
             <button onclick="toggleModal()" class="text-white text-4xl font-light hover:text-yellow-400 transition">&times;</button>
         </div>
         <div class="p-6 max-w-7xl mx-auto">
@@ -168,9 +176,28 @@
                 <img src="images/tiling.jpeg" class="w-full rounded-lg">
                 <img src="images/WhatsApp Image 2026-01-29 at 17.35.44.jpeg" class="w-full rounded-lg">
                 <img src="images/WhatsApp Image 2026-01-29 at 17.35.45 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.45.jpeg" class="w-full rounded-lg">
                 <img src="images/WhatsApp Image 2026-01-29 at 17.35.47.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.49 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.49.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.51 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.51.jpeg" class="w-full rounded-lg">
                 <img src="images/WhatsApp Image 2026-01-29 at 17.35.52.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.35.53.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.02.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.03 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.03.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.04 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.04.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.05 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.05 (2).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.05.jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.06 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.07 (1).jpeg" class="w-full rounded-lg">
                 <img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (1).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.08 (2).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.09 (2).jpeg" class="w-full rounded-lg">
+                <img src="images/WhatsApp Image 2026-01-29 at 17.36.09.jpeg" class="w-full rounded-lg">
             </div>
         </div>
     </div>
@@ -178,7 +205,7 @@
     <footer class="pt-32 pb-10 border-t border-white/5 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
         <div>
             <p class="logo-font text-lg mb-2 text-yellow-400">Your Handyman Cape Town</p>
-            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">© 2026 | www.yourhandymancapetown.co.za</p>
+            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">© 2026 | yourhandymancapetown.co.za</p>
         </div>
         <div class="flex flex-col md:items-end">
             <span class="text-[9px] text-slate-600 uppercase font-black mb-1">Strategically Built By</span>
@@ -202,7 +229,6 @@
                 document.body.classList.add('modal-open');
             }
         }
-
         function downloadVCard() {
             const vCardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Prince - Your Handyman CT\nORG:Your Handyman Cape Town\nTEL;TYPE=CELL:+27683057176\nURL:https://www.yourhandymancapetown.co.za\nEND:VCARD`;
             const blob = new Blob([vCardData], { type: 'text/vcard' });
